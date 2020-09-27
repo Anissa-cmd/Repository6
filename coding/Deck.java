@@ -280,24 +280,19 @@ public class Deck {
 	}
 	
 	public void shuffle() {
-//		Collections.shuffle(hitPoints);
-		
-//		Fisher-Yates shuffle
+
 		Random random = new Random();
 		
-//		for(int i = 0; i < hitPoints.size(); i++) {
-//			0 1 2 3 4 .......
-//		}
 		
 		for(int i = AceOfDiamonds.size() - 1; i > 0; i--) {
-//			9 8 7 6 5 .......
-			int j = random.nextInt(i + 1);
+
+			int a = random.nextInt(i + 1);
 			
 			Card aceOfDiamondAtIndexI = AceOfDiamonds.get(i);
-			Card aceOfDiamondAtIndexJ = AceOfDiamonds.get(j);
+			Card aceOfDiamondAtIndexJ = AceOfDiamonds.get(a);
 			
 			AceOfDiamonds.set(i, aceOfDiamondAtIndexJ);
-			AceOfDiamonds.set(j, aceOfDiamondAtIndexI);
+			AceOfDiamonds.set(a, aceOfDiamondAtIndexI);
 		}
 	}
 
